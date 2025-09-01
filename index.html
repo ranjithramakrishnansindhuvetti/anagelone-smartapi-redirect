@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SmartAPI Redirect</title>
+  <script>
+    window.onload = function() {
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get("code");
+      if (code) {
+        document.body.innerHTML = `<h2>Authorization Code:</h2><p>${code}</p>`;
+        // Optionally send it to a backend if you set one up later
+      } else {
+        document.body.innerHTML = "<p>No code found in URL.</p>";
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Processing redirect...</p>
+</body>
+</html>
